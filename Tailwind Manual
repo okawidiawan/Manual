@@ -1,0 +1,23 @@
+Tailwind Manual
+
+npm init -y
+npm install -D tailwindcss
+npx tailwindcss init
+
+open tailwind.config.js -> fill content with filename or directory
+
+create src folder -> create input.css file
+fill with tailwind directive :
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+
+link html with output.css
+
+--- tailwind prettier for consistency ---
+npm install -D prettier prettier-plugin-tailwindcss
+
+--- tailwind minify for better size of css file ---
+npx tailwindcss -i ./src/input.css -o ./dist/css/final.css --minify
